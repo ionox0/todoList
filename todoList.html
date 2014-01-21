@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<!--<11<script src="JQuery_Flyout.js"></script>-->
+		<link rel="stylesheet" href="todoList.css">
+	</head>
+	<body>
+		<h1>todo:</h1>
+		<form>
+			<label id="instructions">Enter a task!</label> 
+			<input type="text" id="todoText" placeholder="e.g. Buy Groceries" autofocus>
+			<input type="submit" class="btn-primary" id="submit" value="Submit">
+		</form>
+		<script>
+			$('form').submit(function () {
+                if ($('#todoText').val() !== '') {
+                    var newItem = $('#todoText').val();
+                    $('ul').prepend('<li><img src="seahawks_icon.png"></a> ' + newItem + '</li>');
+                };
+                $('#todoText').val('');
+                return false; 
+         	});
+   			var remove = new function(){
+   				$(document).on('click', 'img', function (){
+   					$(this).parent().toggle('slide');
+   					setTimeout(function() {
+   						$('img').parent().remove();
+   					}, 1000); 
+   				})
+   			}
+		</script>
+		<ul class="list">		
+		</ul>
+	<body>
+</html>

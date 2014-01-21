@@ -1,0 +1,54 @@
+body {
+    font-family: impact;
+    font-size: 20pt;
+    text-align: left;
+    background-color: #000066;
+}
+
+h1{
+    color: #00FF00;
+    font-size: 40pt;
+}
+
+#instructions {
+    color: black;
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    list-style-type: none;
+    text-align: left;
+}
+
+#todoText {
+    color: black;
+    font-size: 22pt;
+    position: relative;
+}
+
+.btn-primary {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 6px;
+    color: black;
+    background-color: #00CC00;
+    border-color: #00FF00;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #2d6ca2;
+    background-position: 0 -15px;
+}
+
+img {
+    margin-right: 10px;
+}
+
+ul{
+    margin-left: -20px;
+    list-style-type: none;
+}
+
+
+
