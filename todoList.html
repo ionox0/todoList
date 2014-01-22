@@ -1,7 +1,6 @@
 <html>
 	<head>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<!--<11<script src="JQuery_Flyout.js"></script>-->
 		<link rel="stylesheet" href="todoList.css">
 	</head>
 	<body>
@@ -14,20 +13,19 @@
 		<script>
 			$('form').submit(function () {
                 if ($('#todoText').val() !== '') {
-                    var newItem = $('#todoText').val();
-                    $('ul').prepend('<li><img src="seahawks_icon.png"></a> ' + newItem + '</li>');
+                    var text = $('#todoText').val();
+                    $('ul').prepend('<li><img src="seahawks_icon.png"></a> ' + text + '</li>');    
                 };
                 $('#todoText').val('');
                 return false; 
          	});
-   			var remove = new function(){
-   				$(document).on('click', 'img', function (){
-   					$(this).parent().toggle('slide');
-   					setTimeout(function() {
-   						$('img').parent().remove();
-   					}, 1000); 
-   				})
-   			}
+			$(document).on('click', 'img', function() {
+    			var $entry = $(this).parent();
+    			$entry.toggle('slide').queue(function(next) {
+        			$entry.remove();
+        			next();
+    			});
+			});
 		</script>
 		<ul class="list">		
 		</ul>
